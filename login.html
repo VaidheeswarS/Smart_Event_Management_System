@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+        <style>
+            /* internal css */
+            body{
+                background-color:rgb(53, 122, 233);
+          
+            }
+
+            #container{
+                height: 628px; 
+                /* background-color:pink; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #main{
+                background-color: white;
+                width: 380px;
+                height: 480px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                
+            }
+
+            .data{
+                width: 310px;
+                padding: 12px;
+                margin-bottom: 11px;
+                border: 1px solid #ccc;
+                /* border-color: #ccc; */
+                border-radius: 5px;
+                outline: none;
+                
+            }
+
+            .data::placeholder{
+                font-family:  "Google Sans", sans-serif;
+            }
+            #fb-button{
+                width: 335px;
+                margin-bottom: 14px;
+                padding: 12px;
+                background-color: rgb(61, 119, 244);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                /* font-weight: bold; */
+                font-family: "Google Sans", sans-serif; 
+            }
+
+            #g-button{
+                width: 335px;
+                margin-bottom: 14px;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color:white;
+                color: grey;
+                cursor: pointer;
+                text-align: center;
+                font-weight: bold;
+                font-family: "Google Sans", sans-serif;
+            }
+            #l-button{
+                width: 335px;
+                margin-top: -15px;
+                padding: 12px;
+                color: white;
+                background-color: rgb(27, 117, 243);
+                border-radius: 5px;
+                border: none;
+                font-family: "Google Sans", sans-serif;
+                cursor: pointer;
+            }
+
+            p{
+                text-align: center;
+                font-size: small;
+                font-family:  "Google Sans", sans-serif;
+            }
+
+            h2{
+
+                font-family: "Google Sans", sans-serif;
+                margin-top: -10px;
+                /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+            }
+
+            a{
+                text-decoration: none;
+                font-family: "Google Sans", sans-serif;
+                color: rgb(27, 117, 243);
+            }
+
+            i{
+                float: left;
+                /* font-weight: 200; */
+                font-size: large;   
+
+            }
+            span{
+                position: absolute;  
+                top: 215px;
+                right: 490px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">    
+            <div id="main">
+                <h2 style="text-align: center;">Login</h2>
+                 <form action="#" id="form">
+                    <input type="text" class="data" name="email" placeholder="Email"> <br>
+                    <input type="password" class="data" name="password" placeholder="Password"> 
+                    <span><i class="fa-solid fa-eye-slash" id="eye"></i></span>
+                
+                    <p style="text-align: center;"><a href="" target="_blank" id="forget">Forget password ?</a></p>    
+                    <br>
+                    <input id="l-button" type="submit" value="Login"><br>
+                    <p>Don't have an account? <a href="register.html" target="_self">Signup</a></p>
+                    <!-- <br> -->
+                    <p>Or</p>
+
+                    <button id="fb-button"><i class="fa-brands fa-facebook"></i>Login with Facebook</button>
+                    <br>
+                    <button id="g-button"><i class="fa-brands fa-google"></i>Login with Google</button>
+                </form>
+            </div>
+        </div>
+        <script src="js/jquery-4.0.0.min.js">
+
+        </script>
+
+        <script src="js/login.js">
+
+        </script>
+    </body>
+</html>

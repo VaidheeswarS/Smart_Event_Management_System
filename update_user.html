@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("images/updateuser.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 380px;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid white;
+            border-radius: 6px;
+
+        }
+
+        th {
+            text-align: left;
+            padding: 12px;
+            color: white;
+            width: 40%;
+        }       
+
+        td {
+            padding: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid white;
+            outline: none;
+            background-color: #51b3f998;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color:white;
+            box-shadow: 0 0 5px white;
+        }
+
+        input[readonly] {
+            background: #51b3f998;
+            cursor: not-allowed;
+        }
+
+        input[type="submit"] {  
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #51b3f998;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #f3d456a5;
+            transform: scale(1.03);
+        }
+
+    </style>
+
+    </head>
+
+    <body>
+    
+        <form action="#" id="form">
+
+            <table >
+                <tr>
+                    <th>User Email</th>
+                    <td><input type="text" readonly></td>
+                </tr>
+                <tr>
+                    <th>User Password</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>User Type</th>
+                    <td><input type="text" readonly></td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Update data">
+
+        </form>
+
+
+
+        <script src="js/jquery-4.0.0.min.js">
+            
+        </script>
+
+        <script src="js/update_user.js">
+
+        </script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-image: url("images/deleteuser.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            body > div {
+                background-color: transparent;
+                backdrop-filter: blur(20px);
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+                width: 320px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 600;
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            body > div > div {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+            }
+
+            button {
+                flex: 1;
+                padding: 10px;
+                border: none;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            #yes {
+                background: #ff6b6b;
+                color: white;
+            }
+
+            #yes:hover {
+                background: #e55050;
+                transform: scale(1.05);
+            }
+
+            #no {
+                background: #6c63ff;
+                color: white;
+            }
+
+            #no:hover {
+                background: #5548c8;
+                transform: scale(1.05);
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+    
+        <div>
+            <p>Are you sure want to Close your account</p>
+
+            <div>
+                <button id="yes">Yes</button>
+                <button id="no">No</button>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+        <script src="js/jquery-4.0.0.min.js">
+
+        </script>
+
+        <script src="js/delete_user.js"></script>
+    </body>
+</html>

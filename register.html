@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Signup</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+        <style>
+
+            body{
+                background-color: rgb(53, 122, 233);
+            }
+
+            #container{
+                height: 649px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                /* background-color: yellow; */
+            }
+
+            #container-1{
+                height: 500px;
+                width: 380px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+            }
+
+            .form-input{
+                padding: 12px;
+                border: 1px solid #ccc;
+                outline: none;
+                width: 300px;
+                margin-top: 10px;
+                border-radius: 5px;
+                /* margin-bottom: 5px */
+            }
+
+            
+            #signup{
+                padding: 12px;
+                border: none;
+                width: 327px;
+                margin-top: 10px;
+                border-radius: 5px;
+                background-color: rgb(27, 117, 243);
+                color: white;
+                font-family: "Google Sans", sans-serif;
+                cursor: pointer;
+            }
+
+            p{
+                font-family: "Google Sans", sans-serif;
+                font-size: small;
+            }
+
+            a{
+                text-decoration: none;
+                color: rgb(27, 117, 243);
+            }
+            h2{
+                margin-bottom: 20px;
+                margin-top: -10px;
+                font-family:  "Google Sans", sans-serif;
+            }
+
+            button{
+                padding: 12px;
+                width: 327px;
+                margin-top: 15px;
+                border-radius: 5px; 
+                border: 1px solid;
+                cursor: pointer;
+                font-family:  "Google Sans", sans-serif;
+    
+            }
+
+            i{
+                float: left;
+                /* width: 50px; */
+                font-size: larger;
+                /* color: #bbb8b8; */
+            }
+            
+            span{
+                position: absolute;
+                top: 290px;
+                left: 760px;
+            }
+            #fb-button{
+                background-color: rgb(61, 119, 244);
+                color: white;
+            }
+            #g-button{
+                border-color: #ccc;
+                background-color: white;
+                color: lightslategray;
+                font-weight: bold;
+            }
+            .radio{
+                /* position: absolute; */
+                margin-left: 20px;
+                margin-top: 12px;
+                cursor: pointer;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <div id="container">
+
+            <div id="container-1"> 
+
+                <h2>Signup</h2>
+                
+                <form action="" id="form">
+                    <input type="text" class="form-input" name="email" placeholder="Email" required> <br>
+                    <input type="radio" class="radio" name="usertype" value="Admin" required>Admin
+                    <input type="radio" class="radio" name="usertype" value="User" required>User <br>
+                    <input type="text" class="form-input" name="password" placeholder="Create password" required> <br>
+                    <input type="password" class="form-input" name="confirm-password" placeholder="Confirm password" required>
+                    <span><i class="fa-solid fa-eye-slash" id="eye"></i></span><br>
+                    <input type="submit" id="signup" value="Signup">
+
+                </form>
+
+                <p>Already have an account? <a href="login.html" target="_self">Login</a></p>
+                <p>Or</p>
+                <div>
+                    <button id="fb-button"> <i class="fa-brands fa-facebook"></i>Login with Facebook</button> <br>
+                    <button id="g-button"><i class="fa-brands fa-google"></i>Login with Google</button>
+                </div>
+
+
+            
+            </div>
+
+        </div>
+
+        <script src="js/jquery-4.0.0.min.js"> 
+
+        </script>
+
+        <script src="js/register.js">
+
+        </script>
+    </body>
+    
+</html>
