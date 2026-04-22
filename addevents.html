@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-image: url("images/events_bg_image.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            form {
+                background-color: transparent;
+                padding: 30px 40px;
+                border-radius: 12px;
+                width: 350px;
+                border-width: 5px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                backdrop-filter: blur(20px);
+            }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+
+        background-color: rgb(232, 186, 157);
+        border-radius: 8px;
+        border: 1px solid rgb(232, 186, 157);
+        outline: none;
+
+        box-sizing: border-box;   
+        height: 40px;            
+        transition: 0.3s;
+    }
+
+    input[type="file"] {
+        height: auto;        
+        padding: 6px;
+        background-color: transparent;
+    }
+
+    input:focus, select:focus {
+        border-color: white;
+        box-shadow: 0 0 5px white;
+    }
+
+
+    #submit {
+        margin-top: 20px;
+        background: #ec6821;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    #submit:hover {
+        background: #ef560f;
+        transform: scale(1.05);
+    }
+
+            
+        </style>
+    </head>
+
+    <body>
+
+        <form action="#">
+
+            <label for="">Event Name</label>
+            <input type="text" name="eventname" id="eventname" required>
+            <br>
+
+            <label for="">Event Type</label>
+            <select name="eventype" id="eventype" required>
+                <option value="Workshop">Workshop</option>
+                <option value="Seminar">Seminar</option>
+                <option value="Concert">Concert</option>
+            </select>
+            <br>
+
+            <label for="">About Event</label>
+            <input type="text" name="aboutevent" id="aboutevent" required>
+            <br>
+            
+            <label for="">Date and Time</label>
+            <input type="datetime-local" id="datetime" required>
+            <br>
+            
+            <label for="">Location</label>
+            <input type="text" name="loc" id="loc" required>
+            <br>
+
+            <label for="">Event Image</label>
+            <input type="file" id="file" required>
+
+            <input type="submit" value="Add Event" id="submit">
+
+        </form>
+
+        <script src="js/jquery-4.0.0.min.js">
+
+        </script>
+
+        <script src="js/addevents.js">
+
+        </script>
+
+    </body>
+</html>

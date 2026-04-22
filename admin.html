@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("images/adminbg.jpg");   
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    div {
+          background-color: transparent;
+        backdrop-filter: blur(14px);
+        padding: 25px 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        width: 220px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      
+    }
+
+    li {
+        margin: 12px ;
+        
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        border-radius: 8px;
+        background: rgb(237, 210, 171);
+        color: #333;
+        font-weight: 600;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        background: rgb(237, 124, 139);
+        color: white;
+        transform: scale(1.05);
+    }
+
+    h2{
+        color: white;
+        text-shadow: 2px 2px 5px black;
+    }
+        </style>
+
+    </head>
+
+    <body>
+        <h2>Welcome to Admin Dashboard</h2>
+        <div>
+            <ul>
+                <li><a href="addevents.html">Add Events</a></li>
+                <li><a href="viewevents.html">View Events</a></li>
+                <li><a href="updatevents.html">Update Events</a></li>
+                <li><a href="deletevents.html">Delete Events</a></li>
+            </ul>
+        </div>
+        
+        <div>
+                <ul>
+                    <li><a href="view_user.html">View</a></li>
+                    <li><a href="update_user.html">update</a></li>
+                    <li><a href="delete_user.html">delete</a></li>
+                    <!-- <li><a href="">Booked events</a></li> -->
+                </ul>
+        </div>
+
+    </body>
+
+</html>

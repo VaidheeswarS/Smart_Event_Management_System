@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-image:url("images/updatelive.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            form {
+                backdrop-filter: blur(15px);
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            }
+
+            table {
+                border-collapse: collapse;
+                table-layout: fixed;
+                width: 100%;
+            }
+
+            th {
+                background-color: rgb(240, 189, 126);
+                color: white;
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            th, td {            
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            input, select {
+                width: 100%;
+                padding: 8px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+                outline: none;
+                box-sizing: border-box; 
+                height: 36px;
+                transition: 0.3s;
+            }
+
+            input:focus, select:focus {
+                border-color: rgb(240, 189, 126);
+                box-shadow: 0 0 5px rgb(240, 189, 126);
+                background-color: rgba(111, 158, 190, 0.445);
+            }
+
+            input[type="file"] {
+                padding: 4px;
+            }
+
+            #submit {
+                margin-top: 15px;
+                width: 100%;
+
+                padding: 10px;
+                background:rgba(111, 158, 190, 0.445)   ;
+                color: white;
+
+                border: none;
+                border-radius: 8px;
+
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            #submit:hover {
+                background: rgba(111, 158, 190, 0.991);
+                transform: scale(1.02);
+            }   
+
+        </style>
+    </head>
+    
+
+    <body>
+    
+        <p id="p"></p>
+
+        <form action="#" id="form">
+
+            <table>
+                
+                <tr>
+                    <th>Event Name</th>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <th>Event Type</th>
+                    <td><select name="" id="select">
+                        <option value="Workshop">Workshop</option>
+                        <option value="Seminar">Seminar</option>
+                        <option value="Concert">Concert</option>
+                    </select></td>
+                </tr>
+
+                <tr>
+                    <th>About Event</th>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <th>Event Day and Time</th>
+                    <td><input type="datetime-local"></td>
+                </tr>
+
+                <tr>
+                    <th>Event Location</th>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <th>Event Image</th>
+                    <td><input type="file"></td>
+                </tr>
+
+            </table>
+
+            <input type="submit" id="submit">
+        </form>
+
+
+        <script src="js/jquery-4.0.0.min.js">
+
+        </script>
+
+        <script src="js/update_live.js">
+
+        </script>
+    </body>
+</html>

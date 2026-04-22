@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/home.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;  
+    
+}
+
+#title{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+section{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#search{
+    width: 500px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    
+}
+#search-button{
+    position: absolute;
+    right: 370px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    width: 50px;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+#search-button i{
+    color: white;
+}
+
+#search-button:hover{
+    background-color: white;
+}
+
+#search-button:hover i{
+    color: black;
+}
+
+#filter{
+    position: absolute;
+    width: 100px;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 20px;
+    right: 200px;
+    cursor: pointer;
+    color: rgb(91, 91, 91);
+   
+
+}
+
+article{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#user_nav ul li{
+    display: inline-block;
+    margin: 15px;
+
+
+}
+
+#user_nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#event-box {
+    height: 500px;
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider {
+    display: flex;
+    will-change: transform;
+}
+
+
+.card {
+    min-width: 300px;   
+    height: 400px;
+    margin-right: 10px;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 10;
+    min-width: 270px;
+}
+
+p{
+    text-align: justify;
+}
+h2,p{
+    z-index: 1;
+}
+
+#suggestion-box{
+    position: absolute;
+    top: 60px;
+    width: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 9999;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestion-item{
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover{
+    background: #f2f2f2;
+}

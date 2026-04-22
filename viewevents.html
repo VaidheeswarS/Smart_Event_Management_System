@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-image: url("images/viewevents.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                padding: 40px;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;   
+            border-spacing: 0 10px;      
+            color: #000000;
+        }
+
+        th {        
+            text-align: left;
+            text-align: justify;
+            padding: 12px;
+            color: rgb(3, 3, 3);
+            font-size: 15px;
+        }
+
+                tr {
+            background-color: transparent;
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            border-style: 1px solid white;
+        }
+
+        td {
+            padding: 10px;
+            text-align: justify ;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        tr td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        tr td:last-child {  
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.01);
+            transition: 0.2s;
+        }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- <p></p> -->
+
+        <table>
+            <tr>
+                <th>Event Name</th>
+                <th>Event Type</th>
+                <th>About Event</th>
+                <th>Event Day and Time</th>
+                <th>Event Location</th>
+            </tr>
+           
+        </table>
+
+
+
+
+        <script src="js/jquery-4.0.0.min.js">
+
+        </script>
+
+        <script src="js/viewevents.js">
+
+        </script>
+    </body>
+</html>

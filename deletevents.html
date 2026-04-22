@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-image:url("images/dell.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            form {
+                backdrop-filter: blur(15px);
+                padding: 30px;
+                border-radius: 12px;
+
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                width: 320px;
+                text-align: center;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: 600;
+                color: white;
+                text-shadow: 2px 2px 5px black;
+            }
+
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 8px;
+                background-color: transparent;
+                color: black;
+                border: 1px solid rgb(134, 209, 247);
+                outline: none;
+                box-sizing: border-box;
+                transition: 0.3s;
+            }
+
+            select:focus {
+                border-color: rgb(134, 209, 247);
+                box-shadow: 0 0 10px rgba(69, 152, 193, 0.5);
+            }
+
+            #submit {
+                width: 100%;
+                padding: 10px;
+
+                background: rgb(242, 134, 157);
+                color: white;
+
+                border: none;
+                border-radius: 8px;
+
+                font-weight: bold;
+               cursor: pointer;
+                transition: 0.3s;
+            }
+
+            #submit:hover {
+                background: rgb(254, 157, 122);
+                transform: scale(1.05);
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+           
+        <form action="#">
+
+            <label for="">Select the Event to Delete</label>
+            <select name="" id="select">
+                <!-- <option id="options"></option> -->
+            </select>
+
+            <input type="submit" name="submit" id="submit">
+        </form>
+
+
+        <script src="js/jquery-4.0.0.min.js">
+
+        </script>
+
+        <script src="js/delete.js">
+
+        </script>
+
+    </body>
+</html>
