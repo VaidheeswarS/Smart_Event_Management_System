@@ -79,8 +79,8 @@ $(document).ready(function(){
                 "width":"500px",
                 "z-index": 1000,
                 "position":"absolute",
-                "top":200,
-                "left":360,
+                "top":160,
+                "left":400,
                 "padding": "20px"
 
             });
@@ -88,8 +88,12 @@ $(document).ready(function(){
             inner_p.css("text-align","justify")
 
             close.css({"position":"absolute",
+                "height":30,
+                "width":30,
                 "top":20,
-                "right":20
+                "right":20,
+                "border-radius":"100%",
+                "cursor":"pointer",
             })
 
             inner_button.css({

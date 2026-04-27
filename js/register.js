@@ -35,7 +35,7 @@ form.submit(function(e){
                     localStorage.setItem(inputs.eq(0).val(),JSON.stringify(value));
 
                     alert("User account created");
-                    window.location.href = "login.html";
+                    window.location.href = "index.html";
                 }
                 else{
                     alert("Passwords are not matching.");
