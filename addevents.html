@@ -1,94 +1,6 @@
-<!DOCTYPE html> 
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-
-        <style>
-            
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                /* background-image: url("images/events_bg_image.jpg"); */
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            form {
-                background-color: transparent;
-                padding: 30px 40px;
-                border-radius: 12px;
-                width: 350px;
-                border-width: 5px;
-                box-shadow: 0 0 10px rgb(28, 154, 173);
-                backdrop-filter: blur(20px);
-            }
-
-            label {
-                display: block;
-                margin-top: 12px;
-                font-weight: 600;
-                color: rgb(28, 154, 173);
-            }
-            input, select {
-                width: 100%;
-                padding: 10px;
-                margin-top: 5px;
-                background-color: rgb(28, 154, 173);
-                border-radius: 8px;
-                border: 1px solid rgb(28, 154, 173);
-                outline: none;
-                color: white;
-                box-sizing: border-box;   
-                height: 40px;            
-                transition: 0.3s;
-            }
-
-            input[type="file"] {
-                height: auto;        
-                padding: 6px;
-                background-color: transparent;
-            }
-
-            input:focus, select:focus {
-                border-color: white;
-                /* box-shadow: 0 0 5px white; */
-                color: white;
-            }
 
 
-            #submit {
-                margin-top: 20px;
-                background: rgb(28, 154, 173);
-                color: white;
-                border: none;
-                font-weight: bold;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            #submit:hover {
-                border: 2px solid;
-                border-color: rgb(28, 154, 173);
-                background-color: white;
-                color: rgb(28, 154, 173);
-                transform: scale(1.05);
-            }
-
-            
-        </style>
-    </head>
-
-    <body>
-
-        <form action="#">
+        <form id="addevents-form">
 
             <label for="">Event Name</label>
             <input type="text" name="eventname" id="eventname" required>
@@ -121,13 +33,4 @@
 
         </form>
 
-        <script src="js/jquery-4.0.0.min.js">
-
-        </script>
-
-        <script src="js/addevents.js">
-
-        </script>
-
-    </body>
-</html>
+       

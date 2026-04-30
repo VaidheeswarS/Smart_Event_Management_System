@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                min-height: 650px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            a{
+                height: 80px;
+                width: 120px;
+                text-decoration: none;
+                color: rgb(28, 154, 173);
+                border: 2px solid rgb(28, 154, 173);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                border-radius: 7px;
+            }   
+            i{
+                font-size: larger;
+                color: rgb(28, 154, 173);
+            }
+            #view, #update, #delete{
+                transition: transform 0.3s ease;
+            }
+            #view:hover, #update:hover, #delete:hover{
+                transform: scale(1.2);
+                /* transition:cubic-bezier(0.075, 0.82, 0.165, 1) */
+            }
+        </style>
+    </head>
+
+
+    <body>
+
+        <a href="view_user.html" id="view">View
+            <i class="fa-solid fa-user"></i>
+        </a>
+        <a href="update_user.html" id="update">Update
+            <i class="fa-solid fa-user-check"></i>
+        </a>
+        <a href="delete_user.html" id="delete"> Delete
+            <i class="fa-solid fa-trash-can"></i>
+        </a>
+    </body>
+</html>
+
+<!-- 
+
+    let viewevents = $("#viewevents")
+    viewevents.click(function(){
+
+        box.load("viewevents.html", function(){
+            let box = $("#div-2")
+            let table = $("table")
+
+            var i;
+            for(i=0; i<localStorage.length; i=i+1){
+                
+                let key = localStorage.key(i)
+                let value = JSON.parse(localStorage.getItem(key))
+
+                if(key.endsWith(".com")){
+                    continue;
+
+                }
+                else{
+
+                    let tr = $("<tr>")
+                    let td1 = $("<td>")
+                    let td2 = $("<td>")
+                    let td3 = $("<td>")
+                    let td4 = $("<td>")
+                    let td5 = $("<td>")
+                    let td6 = $("<td>")
+                    let td7 = $("<td>")
+
+                    let up_btn = $("<button>")
+                    let d_btn = $("<button>")
+
+                    up_btn.html("Update Event")
+                    d_btn.html("Delete Event")
+
+                    td1.html(key);
+                    td2.html(value.Event_Type);
+                    td3.html(value.About_Event);
+                    td4.html(value.Date_Time);
+                    td5.html(value.Location)
+                    td6.append(up_btn)
+                    td7.append(d_btn)
+                    tr.append(td1, td2, td3, td4, td5, td6, td7);
+                    table.eq(0).append(tr);
+                    // let name = $("#name");
+                    // let type = $("#etype");
+                    // let about = $("#about")
+                    // let datetime = $("#datetime");
+                    // let location = $("#location");
+                    // name.html(key);
+                    // type.html(value.Event_Type)
+                    // about.html(value.About_Event)
+                    // datetime.html(value.Date_Time)
+                    // location.html(value.Location)
+
+                    up_btn.click(function(){
+                        
+                        box.load("update_live.html", function(){
+                            // alert(key);
+                            var value = JSON.parse(localStorage.getItem(key));
+                            value.Event_type
+                            // alert(key)
+                            var input = $("input")
+                            input.eq(0).attr("value",key);
+                            input.eq(1).attr("value",value.About_Event);
+                            input.eq(2).attr("value",value.Date_Time);
+                            input.eq(3).attr("value",value.Location);
+                            // input.eq(4).attr("value",value.Image)
+
+                            let td = $("td")
+
+                            let para = $("<p>")
+                            let old = value.Image
+                            para.html("old image: "+ old)
+                            para.css("overflow","hidden")
+                            td.eq(5).append(para)
+                            let select = $("#select")
+                            select.val(value.Event_Type) 
+
+                            let form = $("#update_live_form")
+                            form.submit(function(e){
+
+                                e.preventDefault();
+
+                                if (key===input.eq(0).val().trim()){
+                                    value.Event_Type = select.val();    
+                                    value.About_Event = input.eq(1).val();
+                                    value.Date_Time = input.eq(2).val();
+                                    value.Location = input.eq(3).val();
+                                    let a = input.eq(4)
+                                    let b = a[0].files[0]
+
+                                    if(input.eq(1).val().length<500){
+
+                                        reader = new FileReader()
+
+                                        if(b==null){
+                                            value.Image = old;
+                                            localStorage.setItem(key, JSON.stringify(value));
+
+                                        }
+                                        else{
+                                            reader.onload = function(e){
+                                                value.Image = e.target.result;
+                                                localStorage.setItem(key, JSON.stringify(value));
+                                            }
+                                            reader.readAsDataURL(b);
+
+                                        }
+                                        alert("Event Updated.");
+                                        window.history.back()
+
+                                    }
+                                    else{
+                                        alert("About Event has reached its max limit, please type below 500 letters")
+
+                                    }
+                                    
+                                    
+                                }
+                                else{
+                                    localStorage.removeItem(key);
+                                    let a = input.eq(4)
+                                    let b = a[0].files[0]
+                                    // value.Image = b.name;
+
+                                    if(input.eq(1).val().length<500){
+                                        
+                                        if(b==null){
+                                        
+                                            let reader = new FileReader();
+                                            reader.onload = function(e){
+
+                                                let new_data = {
+                                                    "Event_Type":select.val(),
+                                                    "About_Event":input.eq(1).val(),
+                                                    "Date_Time":input.eq(2).val(),
+                                                    "Location":input.eq(3).val(),
+                                                    "Image":old
+                                                }
+                                                localStorage.setItem(input.eq(0).val().trim(),JSON.stringify(new_data));
+
+                                            } 
+                                            reader.readAsDataURL(b);
+                                        }
+                                        else{
+                                            let reader = new FileReader();
+                                            reader.onload = function(e){
+
+                                                let new_data = {
+                                                    "Event_Type":select.val(),
+                                                    "About_Event":input.eq(1).val(),
+                                                    "Date_Time":input.eq(2).val(),
+                                                    "Location":input.eq(3).val(),
+                                                    "Image":e.target.result
+                                                }
+                                                localStorage.setItem(input.eq(0).val().trim(),JSON.stringify(new_data));
+                                            } 
+                                            reader.readAsDataURL(b);
+                                        }
+                                        window.history.back()
+
+                                    }
+                                    else{
+                                        alert("About Event has reached its max limit, please type below 500 letters")
+                                    }            
+
+                                }
+                            });
+
+                        })
+                    });
+
+
+                }
+
+            }
+        })
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->

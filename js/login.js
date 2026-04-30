@@ -21,11 +21,20 @@ $(document).ready(function(){
                 if(db_data.User_Type==="Admin"){
 
                     sessionStorage.setItem("user",email);
-                    window.location.href = "admin.html";
+                    sessionStorage.setItem("auth", "true");
+                    window.location.replace("admin.html");
                 }
-                else{
-                    sessionStorage.setItem("user",email);
-                    window.location.href = "homepage.html";
+                else if(db_data.User_Type==="User"){
+                    
+                    if(db_data.Status==="Deactivated"){
+                        alert("Your Id has been Deactivated by Admin.")
+                    }
+                    else{
+                        sessionStorage.setItem("user",email);
+                        sessionStorage.setItem("auth", "true")
+                        window.location.replace("homepage.html");
+                    }
+                    
                 }
             }
             else{

@@ -31,10 +31,13 @@ form.submit(function(e){
                     let value = {
                         "Password": inputs.eq(1).val(),
                         "User_Type": user_type,
+                        "Status":"Activated",
                     }
                     localStorage.setItem(inputs.eq(0).val(),JSON.stringify(value));
 
                     alert("User account created");
+                    inputs.eq(0).val()=="";
+                    inputs.eq(1).val().trim()==""
                     window.location.href = "index.html";
                 }
                 else{

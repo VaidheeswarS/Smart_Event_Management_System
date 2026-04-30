@@ -380,8 +380,8 @@ header {
 section {
     background-color: rgb(28,154,173);
     padding: 15px;
-
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -405,10 +405,10 @@ section {
     cursor: pointer;
 }
 
-#search-button:hover {
-    background-color: rgb(28,154,173);
-    color: white;
-}
+/* #search-button:hover {
+    background-color: white;
+    color: rgb(28,154,173);
+} */
 
 #filter {
     padding: 10px;
@@ -434,16 +434,14 @@ article {
 
 #user_nav li {
     border-bottom: 1px solid rgb(28,154,173);
-}
-
-#user_nav a {
     display: block;
     padding: 12px;
     text-decoration: none;
     color: rgb(28,154,173);
+    cursor: pointer;
 }
 
-#user_nav a:hover {
+#user_nav li:hover {
     background-color: rgb(28,154,173);
     color: white;
 }
@@ -453,9 +451,11 @@ article {
     height: 500px;
     overflow: hidden;
     position: relative;
-
+    background-color: #f5f5f5;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .slider {
@@ -545,6 +545,21 @@ article {
     background: #f2f2f2;
 }
 
+#logout{
+    position: absolute;
+    right: 30px;
+    padding: 10px 15px;
+    border: none;
+    background-color: white;
+    color: rgb(28,154,173);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+#out{
+    font-size: small;
+}
+
 @media (max-width: 768px) {
 
     header {
@@ -570,5 +585,139 @@ article {
 
     #user_nav {
         width: 100%;
+    }
+}
+
+#event-box #view-form table {
+    width: 100%;
+    /* max-width: 420px; */
+    table-layout: auto;
+    margin-top: 10px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.6s ease;
+}
+
+#event-box #view-form tr {
+                border-bottom: 1px solid #eee;
+            }
+
+#event-box #view-form tr:last-child{    
+                border-bottom: none;
+            }
+
+#event-box #view-form th {
+                color: rgb(28, 154, 173);
+                text-align: center;
+                padding: 18px;
+                /* width: 100%; */
+                font-weight: 600;
+                background-color: #f9f9f9;
+            }
+
+#event-box #view-form td {
+                padding: 18px;
+                text-align: center;
+                color: #333;
+                font-weight: 600;
+            }
+
+#event-box #view-form tr:hover {
+                background-color: #e5fafa;
+                transition: 0.3s;
+            }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        width: 95%;
+    }
+    th, td {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+.blur_bg{
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+#event-box #booked table {
+    width: 100%;
+    /* max-width: 900px; */
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: white;
+
+    border: 1px solid rgb(28,154,173);
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    animation: viewIn 0.6s ease;
+    /* transform: 0.3s; */
+}
+
+#event-box #booked th {
+    background-color: rgb(28,154,173);
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#event-box #booked td {
+    padding: 12px;
+    text-align: center;
+    color: rgb(28,154,173);
+    border-bottom: 1px solid #eee;
+}
+
+#event-box #booked tr:nth-child(even) td {
+    background-color: rgba(28,154,173,0.08);
+}
+
+#event-box #booked tr:hover td {
+    background-color: rgba(28,154,173,0.2);
+}
+
+#event-box #booked button {
+    padding: 6px 12px;
+    background-color: rgb(28,154,173);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: 0.3s; */
+}
+
+#event-box #booked button:hover {
+    background-color: white;
+    color: rgb(28,154,173);
+    border: 1px solid rgb(28,154,173);
+    /* transform: scale(1.05); */
+}
+@keyframes viewIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

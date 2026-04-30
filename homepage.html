@@ -14,12 +14,12 @@
     <style>
         
     </style>
-    
-    
+
     </head>
     
     <body>
 
+        <div id="main">
         <header>
             <h2 id="title">Smart Event Management</h2>
         </header>
@@ -34,6 +34,11 @@
                 <option value="Concert">Concert</option>
 
             </select>
+            <button id="logout">
+                logout 
+                <i class="fa-solid fa-arrow-right-from-bracket" id="out"></i>
+
+            </button>
 
         </section>
 
@@ -41,10 +46,8 @@
         
             <div id="user_nav">
                 <ul>
-                    <li><a href="view_user.html">View</a></li>
-                    <li><a href="update_user.html">update</a></li>
-                    <li><a href="delete_user.html">delete</a></li>
-                    <li><a href="booked_events.html">Booked events</a></li>
+                    <li id="view">View</li>
+                    <li id="book">Booked events</li>
                 </ul>
             </div>
 
@@ -61,5 +64,8 @@
             <script src="js/home.js"> 
             
             </script>
+
+    </div>
+
     </body>
 </html>

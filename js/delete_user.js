@@ -8,7 +8,7 @@ yes_button.click(function(){
 
 
     localStorage.removeItem(User)
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     alert("user account removed");
 
 

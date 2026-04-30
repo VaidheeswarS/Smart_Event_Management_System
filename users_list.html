@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+    body{
+        font-family: Arial, sans-serif;
+        background: #eef5f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 420px;
+        background: white;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th{
+        background: rgb(28, 154, 173);
+        color: white;
+        padding: 14px;
+        text-align: left;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    td{
+        padding: 12px 14px;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 14px;
+    }
+
+    tr:nth-child(even):hover, tr:nth-child(odd):hover{
+        background-color: rgba(28, 154, 173, 0.438);
+        transition: 0.3s ease;
+    }
+
+    tr:nth-child(even){
+        background: #f9fbfc;
+    }
+
+    tr:last-child td{
+        border-bottom: none;
+    }
+
+</style>
+
+
+    </head>
+
+    <body>
+
+        <table>
+            <tr>
+                <th>User Id</th>
+                <th>User Type</th>
+            </tr>
+        </table>
+
+
+
+        <script src="js/jquery-4.0.0.min.js">
+
+        </script>
+
+        <script src="js/users_list.js">
+
+        </script>
+    </body>
+</html>

@@ -1,13 +1,7 @@
     $(document).ready(function(){
 
-        var body = $("body");
-        // let para = $("<p>")
-        // para.html("HI welcome");
-
-        var div = $("<div>")
-        var table = $("<table>")
-      
-
+        let box = $("#div-2")
+        let table = $("table")
 
         var i;
         for(i=0; i<localStorage.length; i=i+1){
@@ -34,7 +28,7 @@
                 td5.html(value.Location)
 
                 tr.append(td1, td2, td3, td4, td5);
-                table.append(tr);
+                table.eq(0).append(tr);
                 // let name = $("#name");
                 // let type = $("#etype");
                 // let about = $("#about")
@@ -49,8 +43,6 @@
             }
 
         }
-        div.append(table);
-        body.eq(0).append(div);
 
 
     });

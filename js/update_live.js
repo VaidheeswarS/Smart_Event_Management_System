@@ -29,12 +29,11 @@ $(document).ready(function(){
     select.val(value.Event_Type) 
 
 
-    let form = $("#form")
+    let form = $("#update_live_form")
     form.submit(function(e){
 
         e.preventDefault();
 
-        
 
         if (data===input.eq(0).val().trim()){
             value.Event_Type = select.val();    

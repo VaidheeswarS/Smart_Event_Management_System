@@ -6,7 +6,7 @@ var i, count;
 count = 0;
 var v = Object.values(user_info)
 var k = Object.keys(user_info)
-for(i=2; i<Object.keys(user_info).length; i=i+1){
+for(i=3; i<Object.keys(user_info).length; i=i+1){
 
     count = count+1
     var tr = $("<tr>")
